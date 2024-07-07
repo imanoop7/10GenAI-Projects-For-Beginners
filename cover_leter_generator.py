@@ -3,7 +3,7 @@ import gradio as gr
 from langchain_core.prompts import PromptTemplate
 
 
-def cover_letter(contact_person,your_name, role, company_name,personal_exp,job_desc,passion,skills):
+def cover_letter(contact_person:str,your_name:str, role:str, company_name:str,personal_exp:str,job_desc:str,passion:str,skills:str):
     prompt = PromptTemplate(
     template_format = "Write a cover letter to  {contact_person}\n  from  {your_name}\n  for a  {role}\n  job at  {company_name} . \n\n I have experience in  {personal_exp} \n\n I am excited about the job because  {job_desc} \n\n  I am passionate about  {passion} \n\n I have experience in {skills}. ",
     input_variables = ["contact_person","your_name", "role", "company_name","personal_exp","job_desc","passion","skills"],
